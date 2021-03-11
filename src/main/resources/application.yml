@@ -1,0 +1,75 @@
+#application properties
+server:
+  port: 8083
+
+spring:
+  application:
+    name: Kumparaturi_rest_default
+  profiles:
+    active: dev
+  # ===============================
+  # = Hibernate datasource
+  # ===============================
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username:
+    password:
+    maxActive: 5
+    maxIdel: 4
+    minIdle: 2
+    initialSize: 5
+# ===============================
+# = JPA configurations
+# ===============================
+  jpa:
+    properties:
+      hibernate:
+        default_schema: kumparaturi
+        jdbc:
+          lob:
+            non_contextual_creation: true
+      ddl-auto: none
+# ===============================
+# = Jackson configurations
+# ===============================
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+  output:
+    ansi:
+      enabled: ALWAYS
+# ===============================
+# = DevTools configurations
+# ===============================
+  devtools:
+    livereload:
+      enabled: false
+    restart:
+      log-condition-evaluation-delta: false
+  # ===============================
+  # = MAIL configurations
+  # ===============================
+  mail:
+    host:
+    port:
+    username: 
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+app:
+  jwtSecret: jwtSecretkey
+  secretWordForRegistration: secretwordForRegistration
+  databaseSchema: kumparaturi
+  onesignal:
+    restKEY: 
+    appID: 
+
+
+

@@ -1,0 +1,15 @@
+#application properties
+server:
+  port: 8083
+
+spring:
+  application:
+    name: Kumparaturi_rest_prod
+  #datasource configuration
+  datasource:
+    url: 
+    username: 
+    password: 
+app:
+  jwtExpirationInMs: 6048000000
+  jwtExpirationInMsRemeberMe: 60480000000

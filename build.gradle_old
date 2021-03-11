@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.alex'
+version = '0.0.1-SNAPSHOT'
+
+description = """kumparaturi"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version:'2.1.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.1.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'2.1.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'2.1.8.RELEASE'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version:'0.9.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'2.1.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version:'2.1.8.RELEASE'
+    compile group: 'commons-beanutils', name: 'commons-beanutils', version:'1.9.3'
+    compile group: 'org.webjars', name: 'bootstrap', version:'3.3.7'
+    compile group: 'org.webjars', name: 'jquery', version:'3.2.1'
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version:'2.1.8.RELEASE'
+    runtime group: 'org.postgresql', name: 'postgresql', version:'42.2.6'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.1.8.RELEASE'
+}

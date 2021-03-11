@@ -1,0 +1,36 @@
+#application properties
+server:
+  port: 8083
+  error:
+    include-stacktrace: always
+
+spring:
+  application:
+    name: Kumparaturi_rest_dev
+  # ===============================
+  # = Hibernate datasource
+  # ===============================
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: 
+    password: 
+  # ===============================
+  # = Resource configuration
+  # ===============================
+#  resources:
+#    static-locations: classpath:/resources/static
+#    cache:
+#      period: 0
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+#        type: info
+#      springframework:
+#        security: DEBUG
+app:
+  jwtExpirationInMs: 6048000000000
+  jwtExpirationInMsRemeberMe: 604800000000
+
+
